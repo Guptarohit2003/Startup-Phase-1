@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                background-color: ghostwhite;
+            }
+            .bg1 {
+                background-color: rgb(23, 23, 23);
+            }
+            .bg2 {
+                background-color: black;
+            }
+            .bg3 {
+                background-color: white;
+            }
+            .bg4 {
+                background-color: antiquewhite;
+            }
+            h1 {
+                color: black;
+                cursor: pointer;
+                font-size: 26px;
+                font-family: "Roboto";
+            }
+            .flex {
+                display: flex;
+            }
+            .flex-column {
+                flex-direction: column;
+            }
+            .flex-shrink-0 {
+                flex-shrink: 0;
+            }
+            .flex-grow-1 {
+                flex-grow: 1;
+            }
+            .flex-wrap {
+                flex-wrap: wrap;
+            }
+            .justify-center {
+                justify-content: center;
+            }
+
+            .justify-sbetween {
+                justify-content: space-between;
+            }
+
+            .text-align {
+                text-align-last: center;
+            }
+            .align-center {
+                align-items: center;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                float: right;
+                padding: 10px 20px;
+                margin: 5px 10px;
+                transition: 0.5s;
+            }
+
+            li:hover {
+                border-bottom: 3px solid #0057ff;
+                cursor: pointer;
+            }
+
+            .nav-bar-custom {
+                background-color: white;
+                color: black;
+                padding: 5px 30px;
+                font-family: "Roboto";
+            }
+            .nav-bar-custom span {
+                color: blue;
+                font-size: 20px;
+            }
+            .nav-bar-custom2 {
+                background-color: white;
+                color: black;
+                padding: 0 20px;
+                padding-bottom: 5px;
+            }
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: white;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                margin-top: 10px;
+                padding: 8px 8px 20px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #0057ff;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            .nav4 {
+                display: none;
+            }
+            .nav5 {
+                display: none;
+            }
+            .nav5 span {
+                color: #0057ff;
+                font-size: 20px;
+            }
+            button {
+                cursor: pointer;
+                border: 0;
+                border-radius: 25px;
+                font-weight: 600px;
+                margin: 0 10px;
+                width: 100px;
+                padding: 10px 0;
+                transition: 4sec;
+            }
+            button:hover {
+                color: black;
+                box-shadow: rgba(104, 85, 224, 1);
+                background-color: rgba(104, 85, 224, 1);
+            }
+
+            .sign {
+                color: white;
+                background-color: #0057ff;
+            }
+            .log {
+                background-color: aliceblue;
+                color: #0057ff;
+                border: 2px solid #0057ff;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .dropbtn {
+                color: white;
+                background-color: rgb(23, 23, 23);
+                border: none;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: rgb(23, 23, 23);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content :hover {
+                color: #0057ff;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            /* header section ends */
+            /* body section starts */
+            /* body section ends */
+            /* footer section starts */
+            .footer1 {
+                padding: 30px;
+            }
+            .footer1 > div {
+                padding: 10px;
+                color: #0057ff;
+                font-size: 30px;
+            }
+            .footer1 div span {
+                font-size: 25px;
+                color: #cacdd2;
+            }
+            .footer1 div span a {
+                padding: 0 5px;
+                color: black;
+            }
+
+            .footer2 {
+                padding: 20px;
+            }
+            .footer2 div a {
+                padding: 0 5px;
+                color: black;
+            }
+            .footer2 div span,
+            .footer2 div span a {
+                color: #0057ff;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 950px) {
+                .nav1 {
+                    display: none;
+                }
+                .nav2,
+                .nav3 {
+                    display: none;
+                }
+                .nav4 {
+                    display: flex !important;
+                }
+                .nav5 {
+                    display: flex !important;
+                }
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 951px) and (max-width: 1164px) {
+                .nav1 {
+                    display: none;
+                }
+                .nav5 {
+                    display: flex !important;
+                }
+                .nav2,
+                .nav3 {
+                    display: none;
+                }
+                .nav4 {
+                    display: flex !important;
+                }
+                .sidenav {
+                    padding-top: 15px;
+                }
+                .sidenav a {
+                    font-size: 18px;
+                }
+            }
+
+            #loading {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #fff url("#") no-repeat center center;
+                z-index: 99999;
+            }
+        </style>
+    </head>
+    <body onload="myFunction()">
+        <div id="loading"></div>
+        <!-- Navigation Bar/Section -->
+        <div
+            class="flex justify-sbetween align-center nav-bar-custom flex-shrink-0 flex-wrap"
+        >
+            <div class="flex nav1">
+                <a href="">
+                    <h1>Waah<span>Taj</span></h1>
+                </a>
+            </div>
+            <div class="flex nav2">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <a href="#"><li>Review</li></a>
+                    <a href="#"><li>Explore</li></a>
+                    <a href="#"><li>Home</li></a>
+                    <!-- <li>
+            <div class="dropdown">
+              <div class="dropbtn">Accounts</div>
+              <div class="dropdown-content">
+                <a href="#">Buy</a>
+                <a href="#">Sell</a>
+                <a href="#">Trade</a>
+                <a href="#">Rent</a>
+              </div>
+            </div>
+          </li> -->
+                </ul>
+            </div>
+            <div class="flex nav3">
+                <button class="log">Login</button>
+                <button class="sign">Signup</button>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+            >
+            <a href="file1.html">Coaching</a>
+            <a href="#">Boosting</a>
+            <a href="file2.html">Events & Tournaments</a>
+            <a href="#">Contribute</a>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Trade</a>
+            <a href="#">Rent</a>
+            <a href="#"><button class="log">Login</button></a>
+            <a href=""><button class="sign">Signup</button></a>
+        </div>
+        <div
+            class="flex nav-bar-custom2 flex-shrink-0 flex-wrap justify-sbetween"
+        >
+            <div class="nav4 flex">
+                <!-- <button class="log"><i class="fa fa-bars"></i></button> -->
+                <span
+                    style="font-size: 30px; cursor: pointer"
+                    onclick="openNav()"
+                    ><i class="fa fa-bars"></i
+                ></span>
+            </div>
+            <div class="nav5 flex">
+                <a href="">
+                    <h1>Waah<span>Taj</span></h1>
+                </a>
+            </div>
+        </div>
+        <!-- Navigation Bar/Section End-->
+        <div class="flex main flex-grow-1 bg-image"></div>
+        <!-- footer Section Starts-->
+        <div class="flex flex-column flex-shrink-0">
+            <div
+                class="flex flex-column bg3 justify-center align-center footer1"
+            >
+                <div>WAAHTAJ</div>
+                <div>
+                    <span
+                        >Contact Us:
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a
+                    ></span>
+                </div>
+            </div>
+            <hr />
+            <div class="flex justify-sbetween footer2 bg3">
+                <div class="flex">
+                    <span
+                        >copyright &copy;
+                        <a href="#">Us</a>
+                    </span>
+                </div>
+                <div class="flex">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms and Condition</a>
+                    <a href="">Contact</a>
+                </div>
+            </div>
+        </div>
+        <!-- footer section ends -->
+        <script>
+            var preloader = document.getElementById("loading");
+            function myFunction() {
+                preloader.style.display = "none";
+            }
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </body>
+</html>
